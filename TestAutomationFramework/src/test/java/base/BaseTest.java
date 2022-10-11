@@ -19,8 +19,9 @@ public class BaseTest {
 	
 	//property reading functionality
 	public static Properties prop = new Properties();
+	public static Properties loc = new Properties();
 	public static FileReader fr;
-	
+	public static FileReader fr1;
 	
 	//set up the browserDiver
 	
@@ -31,8 +32,11 @@ public class BaseTest {
 		if(driver == null) {
 			//FileReader fr = new FileReader("C:\\Users\\Sashini\\git\\testProject1\\TestAutomationFramework\\src\\test\\resources\\configfiles\\config.properties");
 			
-			FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\config.properties");
-			prop.load(fr);
+			fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\config.properties");
+			fr1 = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\locators.properties");
+			
+			prop.load(fr); //config
+			loc.load(fr1); //locators
 		}
 		
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
@@ -63,7 +67,7 @@ public class BaseTest {
 	public void tearDown() {
 		
 		//logout
-		driver.close();
-		System.out.println("Tear Down Successful!");
+//		driver.close();
+//		System.out.println("Tear Down Successful!");
 	}
 }
