@@ -29,7 +29,9 @@ public class BaseTest {
 		
 		//check the browser type
 		if(driver == null) {
-			FileReader fr = new FileReader("C:\\Users\\Sashini\\git\\testProject1\\TestAutomationFramework\\src\\test\\resources\\configfiles\\config.properties");
+			//FileReader fr = new FileReader("C:\\Users\\Sashini\\git\\testProject1\\TestAutomationFramework\\src\\test\\resources\\configfiles\\config.properties");
+			
+			FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\config.properties");
 			prop.load(fr);
 		}
 		
