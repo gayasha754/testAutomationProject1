@@ -3,7 +3,7 @@ package testcase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
+import base.BaseTest; 
 
 public class SignInTestCase extends BaseTest {
 	
@@ -12,7 +12,7 @@ public class SignInTestCase extends BaseTest {
 	@Test
 	public static void  SigninTest() throws InterruptedException {
 		
-//		Before Optimization
+//		//Before Optimization
 //		driver.findElement(By.linkText("Sign in")).click();
 //		driver.findElement(By.id("login_id")).sendKeys("sashinigayasha2@gmail.com");
 //		driver.findElement(By.xpath("//form[@id='login']//button[@id='nextbtn']")).click();
